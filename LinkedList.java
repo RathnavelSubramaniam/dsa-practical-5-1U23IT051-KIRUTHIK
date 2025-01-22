@@ -37,16 +37,22 @@ list.displayList();
 System.out.println("Length of the Linked List is:"+list.length());
 scanner.close();
     }
-int length() 
-    {
-  //Type your code here
-    }
-public void displayList() {
-       Node current = head;
+int length() {
+        int count = 0;
+        Node current = head;
         while (current != null) {
-System.out.print(current.data + " -> ");
+            count++;
             current = current.next;
         }
-System.out.println("null");
+        return count;
+    }
+
+    public void displayList() {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " -> ");
+            current = current.next;
+        }
+        System.out.println("null");
     }
 }
